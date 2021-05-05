@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="booking.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Show</title>
+
+</head>
+<body>
+<header>
+<h1>Hotel Booking Form</h1>
+</header>
+    
+<fieldset>
+    <legend>Personal Details</legend>
+    <form onsubmit="return false;" id="bookform">
+    <br>
+    <div class="form-box">
+    <label for="input-title"> Title </label>
+    <select id="title" name="title" required>
+    <option id="null" value="0">Please select a option</option>
+    <option>Mr</option>
+    <option>Mrs</option>
+    <option>Miss</option>
+    <option>Other</option> 
+    </select>
+    </div>
+    <br>
+    <div class="form-box">
+    <label for="input-name" required> Name </label>
+    <input type="text" id="name" placeholder="First and Surname" tabindex="1"/>        
+    </div>
+    <br>
+    <div class="form-box">           
+    <label for="input-address" required> Address: </label> <br>
+    <textarea cols="50" rows="5" id="address" ></textarea>
+    </div>
+    <br>
+    <div class="form-box">
+    <label for="input-email" required> Email </label>
+    <input type="text" id="email"  placeholder="Email Address" tabindex="1"/>        
+    </div>
+    <br>
+        
+ <fieldset>
+     <legend>Hotel Details</legend>
+    <div class="form-box">
+    <label for="input-hotel" required > Name of Hotel </label>
+    <select id="hotel">
+    <option id="null" value="0">Please select a option</option>
+    <option>Mariott Glebeville</option>
+    <option>Hilton Manchester</option>
+    <option>Premier Inn Leek</option>
+    </select>
+    </div>
+    <br>    
+    <div class="form-box">
+    <label for="input-hotel" required> Type of Room </label>
+    <select id="rooms" >
+    <option id="null" value="0">Please select a option</option>
+    <option id="honeymoon" value="honeymoon">Honeymoon</option>
+    <option id="duluxe" value="duluxe">Duluxe</option>
+    <option id="double" value="double">Double</option>
+    <option id="standard" value="standard">Standard</option>
+    </select>
+    </div>
+    <br>
+    <div class="form-box" >
+    <label for="input-guest" required min="1" max="25" > Number of Guests </label>
+    <input type="number" id="guest" name="guest">
+    </div>
+    <div class="form-box" >
+    <label for="input-meal" required > Type of Meal </label>
+    <select id="meal" >
+    <option value="0">Please select a option</option>    
+    <option value="Breakfast">Breakfast</option>
+    <option value="Breakfast and Dinner">Breakfast and Dinner</option>
+    <option value="Dinner">Dinner</option>
+    </select>
+    </div>
+        </fieldset>        
+        <br> 
+<fieldset>     
+<legend>Payment Method</legend>
+        <select id="payment" required >
+    <option value="None">Please select a option</option>
+    <option value="Cash">Cash</option>
+    <option value="Debit">Debit</option>
+    <option value="Credit">Credit</option>
+    </select>
+</fieldset>
+    
+<fieldset> 
+    <legend>To Continue Click Submit</legend>
+    
+<button onclick="return allFunctions();">Submit</button><input type="reset">
+    
+</fieldset>
+</form>    
+<fieldset>
+    <legend>Summary</legend>
+  <div id="result"></div>
+</fieldset>    
+<script src="booking.js" ></script>
+    </fieldset>
+    </body>
+</html>
